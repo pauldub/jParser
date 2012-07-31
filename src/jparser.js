@@ -46,6 +46,12 @@ jParser.prototype.structure = {
 	int32: function () { return this.view.getInt32(); },
 	float32: function () { return this.view.getFloat32(); },
 	float64: function () { return this.view.getFloat64(); },
+	uint16be: function () { return this.view.getUint16(undefined, true); },
+	uint32be: function () { return this.view.getUint32(undefined, true); },
+	int16be: function () { return this.view.getInt16(undefined, true); },
+	int32be: function () { return this.view.getInt32(undefined, true); },
+	float32be: function () { return this.view.getFloat32(undefined, true); },
+	float64be: function () { return this.view.getFloat64(undefined, true); },
 	char: function () { return this.view.getChar(); },
 	string: function (length) {
 		return this.view.getString(toInt.call(this, length));
